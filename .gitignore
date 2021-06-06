@@ -1,0 +1,9 @@
+.env
+.idea/
+.vscode/
+.webpack/
+.serverless/
+node_modules/
+build/
+tmp/
+temp/
