@@ -2,8 +2,10 @@
 .idea/
 .vscode/
 .webpack/
+.dynamodb/
 .serverless/
 node_modules/
 build/
 tmp/
 temp/
+yarn.lock
