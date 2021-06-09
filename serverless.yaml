@@ -27,14 +27,14 @@ custom:
       migrate: true
 
 functions:
-  hello:
-    handler: src/functions/hello.handle # required, handler set in AWS Lambda
+  generateCertificate:
+    handler: src/functions/generateCertificate.handle # required, handler set in AWS Lambda
     name: "${self:service}-${self:provider.stage}" # optional, Deployed Lambda name
     description: "Ignite Serverless"
     events:
       - http:
-          path: /hello
-          method: GET
+          path: /generateCertificate
+          method: POST
           cors: true
 
 resources:
