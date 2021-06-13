@@ -53,7 +53,6 @@ export const handle = async (event) => {
     }).promise()
   }
 
-
   const medalPath = path.join(process.cwd(), "src", "templates", "selo.png")
   const medal = fs.readFileSync(medalPath, "base64")
 

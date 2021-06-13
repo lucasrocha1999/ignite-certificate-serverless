@@ -28,15 +28,20 @@ custom:
 
 functions:
   generateCertificate:
-    handler: src/functions/generateCertificate.handle # required, handler set in AWS Lambda
-    name: "${self:service}-${self:provider.stage}" # optional, Deployed Lambda name
+    handler: src/functions/generateCertificate.handle
     description: "Ignite Serverless"
     events:
       - http:
           path: /generateCertificate
           method: POST
           cors: true
-
+  verifyCertificate:
+    handler: src/functions/verifyCertificate.handle
+    events:
+      - http:
+          path: /verifyCertificate/{id}
+          method: GET
+          cors: true
 resources:
   Resources:
     dbCertificateUsers:
